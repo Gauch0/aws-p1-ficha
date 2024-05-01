@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #011424; /* Azul muy Oscuro */
+    --secondary-color: #00121a; /* Azul Claro */
+    --intermediate-color: #07375A; /* Azul Intermedio */
+    --accent-color: #FFA726; /* Naranja */
+    --text-color: #ffffff; /* Blanco */
+    --link-color: #FFD700; /* Amarillo para links */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px; /* Ajustado para ser más grande */
+    background-color: var(--intermediate-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    padding: 0; /* Asegurar que el header y footer tengan el mismo ancho */
+}
+
+.header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 15px; /* Menos padding para hacerlo visualmente menos ancho */
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info {
+    flex: 2;
+    padding: 20px;
+}
+
+.info h2, .info p {
+    margin: 10px 0;
+    font-weight: normal; /* Normal weight for text */
+}
+
+.info a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+.footer img {
+    width: 100px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 350px; /* Ajustar el ancho máximo para móviles */
+    }
+
+    .header, .footer {
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 8px; /* Hacer el footer un poco menos alto */
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .profile-image, .info {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .profile-image img {
+        max-width: 200px; /* Ajustar el tamaño de la imagen para móviles */
+    }
+
+    .info h2, .info p {
+        text-align: left; /* Alinear texto a la izquierda en móviles */
+    }
+
+    .footer img {
+        width: 80px; /* Reducir el tamaño del logo en el footer */
+    }
+}
